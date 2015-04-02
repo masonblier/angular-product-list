@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <a href="#/products">Back to Products List</a>
+    </div>
+    <div class="col-md-10">
+      <h2>{{product.name}}</h2>
+      <p>Price: {{product.price | currency}}</p>
+      <p>{{product.snippet}}</p>
+
+      <h3>Comments</h3>
+      <ul class="comments">
+        <li ng-repeat="comment in comments" class="thumbnail">
+          {{comment.body}} <small>by {{comment.user}}</small>
+        </li>
+      </ul>
+      <div class="comment-form">
+        <div class="form-group">
+          <label for="commentUser">Name</label>
+          <input type="text" class="form-control" id="commentUser" ng-model="commentUser" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="commentBody">Comment</label>
+          <textarea id="commentBody" ng-model="commentBody" placeholder="Your Comment" class="form-control"></textarea>
+        </div>
+        <button ng-click='btnAddComment();' style="margin-top:10px;" class="btn btn-default">Post Comment</button>
+      </div>
+    </div>
+  </div>
+</div>

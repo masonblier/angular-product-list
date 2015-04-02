@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <a href="#/products">Back to Products List</a>
+    </div>
+    <div class="col-md-10">
+      <h2>Create Product</h2>
+      <div class="product-form">
+        <div class="form-group" ng-class="{'has-error': productNameError}">
+          <label for="productName">Name</label>
+          <input type="text" class="form-control" id="productName" ng-model="productName" placeholder="Product Name">
+        </div>
+        <div class="form-group" ng-class="{'has-error': productPriceError}">
+          <label for="productPrice">Price</label>
+          <input type="text" class="form-control" id="productPrice" ng-model="productPrice" placeholder="0.00">
+        </div>
+        <div class="form-group">
+          <label for="productSnippet">Description</label>
+          <textarea id="productSnippet" ng-model="productSnippet" placeholder="Short description of Product" class="form-control"></textarea>
+        </div>
+        <button ng-click='btnCreateProduct();' style="margin-top:10px;" class="btn btn-default">Create</button>
+      </div>
+    </div>
+  </div>
+</div>

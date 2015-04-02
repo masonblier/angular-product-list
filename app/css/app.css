@@ -1,0 +1,8 @@
+.comments, .comment-form {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+.comments small {
+  color: #999;
+}
